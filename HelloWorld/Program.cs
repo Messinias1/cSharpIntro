@@ -10,9 +10,8 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            // Console.WriteLine("Hello World");
-            byte number = 2;
-            Console.WriteLine(number);
+            const float Pi = 3.14f;
+            Console.WriteLine(Pi);
         }
     }
 }

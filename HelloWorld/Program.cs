@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HelloWorld.Math;
+using System;
 
 namespace HelloWorld
 {
@@ -10,12 +11,20 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            var john = new Person();
+            john.FirstName = "John";
+            john.LastName = "Smith";
+            john.Introduce();
 
-            var a = 1;
-            var b = 2;
-            var c = 3;
+            Calculator calculator = new Calculator();
+            var result = calculator.Add(1, 2);
+            Console.WriteLine(result);
 
-            Console.WriteLine(c > b || c == a);
+            //var a = 1;
+            //var b = 2;
+            //var c = 3;
+
+            //Console.WriteLine(c > b || c == a);
 
             //try
             //{

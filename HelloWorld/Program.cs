@@ -11,18 +11,34 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
-                Console.Write("Type your name");
-                var input = Console.ReadLine();
 
-                if (!String.IsNullOrWhiteSpace(input))
-                {
-                    Console.WriteLine("@Echo: " + input);
-                    continue;
-                }
-                break;
-            }
+            // Genrate random numbers
+            //var random = new Random();
+
+            //const int passwordLength = 10;
+
+            //var buffer = new char[passwordLength];
+            //for (var i = 0; i < passwordLength; i++)
+            //{
+            //    buffer[i] = (char)('a' + random.Next(0, 26));
+
+            //    var password = new string(buffer);
+            //    Console.WriteLine(password);
+            //}
+
+            // LOOPS
+            //while (true)
+            //{
+            //    Console.Write("Type your name");
+            //    var input = Console.ReadLine();
+
+            //    if (!String.IsNullOrWhiteSpace(input))
+            //    {
+            //        Console.WriteLine("@Echo: " + input);
+            //        continue;
+            //    }
+            //    break;
+            //}
 
             //var numbers = new int[] { 1, 2, 3 };
 

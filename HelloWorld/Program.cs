@@ -11,6 +11,82 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            // X 48 1
+            //for(var i = 1; i <= 100; i++)
+            //{
+            //    if(i %3 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+
+            // X 48 2
+            //int sum = 0;
+            //while (true)
+            //{
+            //    Console.WriteLine("Enter a number or ok to exit: ");
+            //    var input = Console.ReadLine();
+
+            //    if(input.ToLower() == "ok")
+            //    {
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        int i = int.Parse(input);
+            //        Console.WriteLine(sum += i);
+            //    }
+            //}
+
+            // X 48 3
+            //Console.WriteLine("Enter a number: ");
+            //var input = Int32.Parse(Console.ReadLine());
+
+            //for(var i = input - 1; input > 0; i--)
+            //{
+            //    if(i == 1)
+            //    {
+            //        break;
+            //    }
+            //    else
+            //    input *= i; 
+            //}
+            //Console.WriteLine(input);
+
+            // X 48 4
+            //int count = 0;
+            //while(true)
+            //{
+            //    Console.WriteLine("Enter a number between 1 and 10: ");
+            //    int guess = Int32.Parse(Console.ReadLine());
+            //    Random rnd = new Random();
+            //    int num = rnd.Next(1, 11);
+            //    Console.WriteLine(num);
+
+            //    if (guess != num)
+            //    {
+            //        Console.WriteLine("Try again");
+            //        count++;
+            //        if (count == 4)
+            //        {
+            //            Console.WriteLine("You Lost");
+            //            break;
+            //        }
+            //    }
+            //    else if (guess == num)
+            //    {
+            //        Console.WriteLine("You Won");
+            //        break;
+            //    }
+            //}
+
+            // X 48 5
+            Console.WriteLine("Enter a series of numbers seperated by a comma: ");
+            var num = Console.ReadLine();
+            num = num.Replace(",", "");
+
+            int i = int.Parse(num);
+            Console.WriteLine(i);
 
             // Genrate random numbers
             //var random = new Random();

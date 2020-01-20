@@ -11,33 +11,107 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            // If Else and switch
-            var season = Season.Autumn;
-
-            switch (season)
+            for (var i = 0; i <= 10; i++)
             {
-                case Season.Autumn:
-                    Console.WriteLine("It's Autumn");
-                    break;
-
-                case Season.Summer:
-                    Console.WriteLine("It's Summer");
-                    break;
-
-                case Season.Winter:
-                    Console.WriteLine("It's Winter");
-                    break;
-
-                case Season.Spring:
-                    Console.WriteLine("It's Spring");
-                    break;
-
-                default:
-                    Console.WriteLine("Not a season");
-                    break;
+                if(i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
             }
 
-            
+            for (var i = 10; i >= 1; i--)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            // VIDEO 42 EXERCISES
+            // X 42 1
+            //Console.WriteLine("Type a number between 1 and 10:  ");
+            //int input = Int32.Parse(Console.ReadLine());
+            //if(input > 0 && input <= 10)
+            //{
+            //    Console.WriteLine("valid");
+            //}
+            //else
+            //    Console.WriteLine("Invalid");
+
+            // X 42 2
+            //Console.WriteLine("Enter a number: ");
+            //int iZero = Int32.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter a second number: ");
+            //int iOne = Int32.Parse(Console.ReadLine());
+
+            //if(iZero > iOne)
+            //{
+            //    Console.WriteLine(iZero);
+            //}
+            //else
+            //    Console.WriteLine(iOne);
+
+            // X 42 3
+            //Console.WriteLine("Enter an image height: ");
+            //int height = Int32.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter an image width: ");
+            //int width = Int32.Parse(Console.ReadLine());
+
+            //if (height > width)
+            //{
+            //    Console.WriteLine("Image is a portrait");
+            //}
+            //else
+            //    Console.WriteLine("Image is a landscape");
+
+            // X 42 4
+            //Console.WriteLine("Enter the speed limit: ");
+            //int speedLimit = Int32.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Enter car speed: ");
+            //int carSpeed = Int32.Parse(Console.ReadLine());
+
+            //if(carSpeed <= speedLimit)
+            //{
+            //    Console.WriteLine("Ok");
+            //}
+            //else if(carSpeed > speedLimit)
+            //{
+            //    int difference = carSpeed - speedLimit;
+            //    difference = difference / 5;
+            //    Console.WriteLine(difference);
+            //    if (difference > 12)
+            //    {
+            //        Console.WriteLine("License Suspended");
+            //    }
+            //}
+
+            // If Else and switch
+            //var season = Season.Autumn;
+
+            //switch (season)
+            //{
+            //    case Season.Autumn:
+            //        Console.WriteLine("It's Autumn");
+            //        break;
+
+            //    case Season.Summer:
+            //        Console.WriteLine("It's Summer");
+            //        break;
+
+            //    case Season.Winter:
+            //        Console.WriteLine("It's Winter");
+            //        break;
+
+            //    case Season.Spring:
+            //        Console.WriteLine("It's Spring");
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("Not a season");
+            //        break;
+            //}
+
             //bool isGoldCustomer = true;
 
             //float price;

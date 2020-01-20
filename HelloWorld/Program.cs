@@ -7,25 +7,63 @@ using System;
 
 namespace HelloWorld
 {
-    public enum ShippingMethod
-    {
-        RegularAirMail = 1,
-        RegisteredAirMail = 2,
-        Express = 3
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            var a = 10;
-            var b = a;
-            b++;
-            Console.WriteLine(string.Format("a: {0} b: {1}", a, b));
+            // If Else and switch
+            var season = Season.Autumn;
 
-            var array1 = new int[3] { 1, 2, 3 };
-            var array2 = array1;
-            array2[0] = 0;
-            Console.WriteLine(string.Format("array1[0]: {0} array2[0]: {1}", array1[0], array2[0]));
+            switch (season)
+            {
+                case Season.Autumn:
+                    Console.WriteLine("It's Autumn");
+                    break;
+
+                case Season.Summer:
+                    Console.WriteLine("It's Summer");
+                    break;
+
+                case Season.Winter:
+                    Console.WriteLine("It's Winter");
+                    break;
+
+                case Season.Spring:
+                    Console.WriteLine("It's Spring");
+                    break;
+
+                default:
+                    Console.WriteLine("Not a season");
+                    break;
+            }
+
+            
+            //bool isGoldCustomer = true;
+
+            //float price;
+            //if (isGoldCustomer)
+            //{
+            //    price = 19.99f;
+            //}
+            //else
+            //    price = 29.99f;
+
+            //float price = (isGoldCustomer) ? 19.99f : 29.99f;
+
+            //Console.WriteLine(price);
+
+
+
+            // Different calls
+            //var a = 10;
+            //var b = a;
+            //b++;
+            //Console.WriteLine(string.Format("a: {0} b: {1}", a, b));
+
+            //var array1 = new int[3] { 1, 2, 3 };
+            //var array2 = array1;
+            //array2[0] = 0;
+            //Console.WriteLine(string.Format("array1[0]: {0} array2[0]: {1}", array1[0], array2[0]));
 
             // Enums
             //var method = ShippingMethod.Express;
@@ -41,20 +79,20 @@ namespace HelloWorld
             //Console.WriteLine(shippingMethod);
 
             // Strings
-//            var firstName = "Carl";
-//            var lastName = "Kakisis";
+            //            var firstName = "Carl";
+            //            var lastName = "Kakisis";
 
-//            var fullName = firstName + " " + lastName;
-//            var mtFullName = string.Format("My name is {0} {1}", firstName, lastName);
+            //            var fullName = firstName + " " + lastName;
+            //            var mtFullName = string.Format("My name is {0} {1}", firstName, lastName);
 
-//            var names = new string[3] { "John", "Bob", "Bev" };
-//            var formattedNames = string.Join(",", names);
-//            Console.WriteLine(formattedNames);
+            //            var names = new string[3] { "John", "Bob", "Bev" };
+            //            var formattedNames = string.Join(",", names);
+            //            Console.WriteLine(formattedNames);
 
-//            var text = @"What is your name?
-//My name is Carl, yours?
-//Bob thanks";
-//            Console.WriteLine(text);
+            //            var text = @"What is your name?
+            //My name is Carl, yours?
+            //Bob thanks";
+            //            Console.WriteLine(text);
 
             // Arrays
             //var numbers = new int[3];
@@ -70,7 +108,7 @@ namespace HelloWorld
             //Console.WriteLine(flags[0]);
             //Console.WriteLine(flags[1]);
             //Console.WriteLine(flags[2]);
-     
+
             //var names = new string[3] { "Javk", "John", "Mary" };
             //Console.WriteLine(names[0]);
 
@@ -106,6 +144,10 @@ namespace HelloWorld
 
             //const float Pi = 3.14f;
             //Console.WriteLine(Pi);
+        }
+        public static void Increment(int number)
+        {
+            number += 10;
         }
     }
 }

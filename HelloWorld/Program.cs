@@ -11,52 +11,84 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            // DEMO LISTS
+            //var numbers = new List<int>() { 1, 2, 3, 4 };
+            //numbers.Add(1);
+            //numbers.AddRange(new int[3] { 5, 6, 7 });
+            
+            //foreach(var num in numbers)
+            //{
+            //    Console.WriteLine(num);
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Index of 1: " + numbers.IndexOf(1));
+            //Console.WriteLine("Index of 1: " + numbers.LastIndexOf(1));
+
+            //Console.WriteLine("Count: " + numbers.Count());
+
+            
+            //for(var i = 0; i < numbers.Count; i++)
+            //{
+            //    if(numbers[i] == 1)
+            //    {
+            //        numbers.Remove(numbers[i]);
+            //    }
+            //}
+            //foreach (var num in numbers)
+            //{
+            //    Console.WriteLine(num);
+            //}
+
+            //numbers.Clear();
+            //Console.WriteLine("Count: " + numbers.Count());
+
+
             // DEMO ARRAYS
-            var numbers = new[] { 3, 7, 9, 2, 14, 6 };
+            //var numbers = new[] { 3, 7, 9, 2, 14, 6 };
 
-            // Length
-            Console.WriteLine("Length: " + numbers.Length);
+            //// Length
+            //Console.WriteLine("Length: " + numbers.Length);
 
-            // IndexOf
-            var index = Array.IndexOf(numbers, 9);
-            Console.WriteLine("Index: " + index);
+            //// IndexOf
+            //var index = Array.IndexOf(numbers, 9);
+            //Console.WriteLine("Index: " + index);
 
-            // Clear
-            Array.Clear(numbers, 0, 2);
+            //// Clear
+            //Array.Clear(numbers, 0, 2);
 
-            Console.WriteLine("Effect of Clear()");
-            foreach(var n in numbers)
-            {
-                Console.WriteLine(n);
-            }
+            //Console.WriteLine("Effect of Clear()");
+            //foreach(var n in numbers)
+            //{
+            //    Console.WriteLine(n);
+            //}
 
-            // Copy
-            var another = new int[4];
-            Array.Copy(numbers, another, 4);
+            //// Copy
+            //var another = new int[4];
+            //Array.Copy(numbers, another, 4);
 
-            Console.WriteLine("Effect of Copy()");
-            foreach(var n in another)
-            {
-                Console.WriteLine(n);
-            }
+            //Console.WriteLine("Effect of Copy()");
+            //foreach(var n in another)
+            //{
+            //    Console.WriteLine(n);
+            //}
 
-            // Sort
-            Array.Sort(numbers);
+            //// Sort
+            //Array.Sort(numbers);
 
-            Console.WriteLine("Effect of Sort()");
-            foreach (var n in numbers)
-            {
-                Console.WriteLine(n);
-            }
+            //Console.WriteLine("Effect of Sort()");
+            //foreach (var n in numbers)
+            //{
+            //    Console.WriteLine(n);
+            //}
 
-            // Reverse
-            Array.Reverse(numbers);
+            //// Reverse
+            //Array.Reverse(numbers);
 
-            Console.WriteLine("Effect of Reverse()");
-            foreach (var n in numbers)
-            {
-                Console.WriteLine(n);
-            }
+            //Console.WriteLine("Effect of Reverse()");
+            //foreach (var n in numbers)
+            //{
+            //    Console.WriteLine(n);
+            //}
 
             // X 48 1
             //for(var i = 1; i <= 100; i++)

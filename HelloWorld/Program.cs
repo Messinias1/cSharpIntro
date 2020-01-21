@@ -82,11 +82,21 @@ namespace HelloWorld
 
             // X 48 5
             Console.WriteLine("Enter a series of numbers seperated by a comma: ");
-            var num = Console.ReadLine();
-            num = num.Replace(",", "");
+            var num = Console.ReadLine().Split(',');
 
-            int i = int.Parse(num);
-            Console.WriteLine(i);
+            int[] digits = num.Select(d => Convert.ToInt32(d)).ToArray();
+
+
+            Console.WriteLine(digits.Max());
+
+            //for (var i = 0; i < num.Length; i = i + 2)
+            //{
+            //    int number = Convert.ToInt32(num[i].ToString());
+            //    var numbers = new int[] { number };
+
+            //    int maxValue = numbers.Max();
+            //    Console.WriteLine("max value {0}", maxValue);
+            //}
 
             // Genrate random numbers
             //var random = new Random();

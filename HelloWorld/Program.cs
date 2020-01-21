@@ -11,6 +11,53 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            // DEMO ARRAYS
+            var numbers = new[] { 3, 7, 9, 2, 14, 6 };
+
+            // Length
+            Console.WriteLine("Length: " + numbers.Length);
+
+            // IndexOf
+            var index = Array.IndexOf(numbers, 9);
+            Console.WriteLine("Index: " + index);
+
+            // Clear
+            Array.Clear(numbers, 0, 2);
+
+            Console.WriteLine("Effect of Clear()");
+            foreach(var n in numbers)
+            {
+                Console.WriteLine(n);
+            }
+
+            // Copy
+            var another = new int[4];
+            Array.Copy(numbers, another, 4);
+
+            Console.WriteLine("Effect of Copy()");
+            foreach(var n in another)
+            {
+                Console.WriteLine(n);
+            }
+
+            // Sort
+            Array.Sort(numbers);
+
+            Console.WriteLine("Effect of Sort()");
+            foreach (var n in numbers)
+            {
+                Console.WriteLine(n);
+            }
+
+            // Reverse
+            Array.Reverse(numbers);
+
+            Console.WriteLine("Effect of Reverse()");
+            foreach (var n in numbers)
+            {
+                Console.WriteLine(n);
+            }
+
             // X 48 1
             //for(var i = 1; i <= 100; i++)
             //{
@@ -81,22 +128,13 @@ namespace HelloWorld
             //}
 
             // X 48 5
-            Console.WriteLine("Enter a series of numbers seperated by a comma: ");
-            var num = Console.ReadLine().Split(',');
+            //Console.WriteLine("Enter a series of numbers seperated by a comma: ");
+            //var num = Console.ReadLine().Split(',');
 
-            int[] digits = num.Select(d => Convert.ToInt32(d)).ToArray();
+            //int[] digits = num.Select(d => Convert.ToInt32(d)).ToArray();
 
 
-            Console.WriteLine(digits.Max());
-
-            //for (var i = 0; i < num.Length; i = i + 2)
-            //{
-            //    int number = Convert.ToInt32(num[i].ToString());
-            //    var numbers = new int[] { number };
-
-            //    int maxValue = numbers.Max();
-            //    Console.WriteLine("max value {0}", maxValue);
-            //}
+            //Console.WriteLine(digits.Max());
 
             // Genrate random numbers
             //var random = new Random();

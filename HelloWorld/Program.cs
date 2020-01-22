@@ -12,33 +12,47 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             // X 55 1
-            var inputList = new List<string>();
-            while (true)
+            //var inputList = new List<string>();
+            //while (true)
+            //{
+            //    Console.WriteLine("Enter a number or press enter to exit: ");
+            //    var input = Console.ReadLine();
+
+            //    if (input == "")
+            //    {
+            //        break;
+            //    }
+            //    inputList.Add(input);
+            //    Console.WriteLine(inputList.Count());
+            //    var likesLeft = inputList.Count() - 2;
+
+            //    if (inputList.Count() == 1)
+            //    {
+            //        Console.WriteLine(inputList[0] + " likes your post");
+            //    }
+            //    else if (inputList.Count() == 2)
+            //    {
+            //        Console.WriteLine(inputList[0] + " and " + inputList[1] + " like your post");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(inputList[0] + ", " + inputList[1] + " " + likesLeft + " others like your post");
+            //    }
+            //}
+
+            // X 55 2
+            Console.WriteLine("Enter your name: ");
+            var input = Console.ReadLine();
+
+            char[] ch = input.ToCharArray();
+            Array.Reverse(ch);
+            foreach (var letter in ch)
             {
-                Console.WriteLine("Enter a number or press enter to exit: ");
-                var input = Console.ReadLine();
-
-                if (input == "")
-                {
-                    break;
-                }
-                inputList.Add(input);
-                Console.WriteLine(inputList.Count());
-                var likesLeft = inputList.Count() - 2;
-
-                if (inputList.Count() == 1)
-                {
-                    Console.WriteLine(inputList[0] + " likes your post");
-                }
-                else if (inputList.Count() == 2)
-                {
-                    Console.WriteLine(inputList[0] + " and " + inputList[1] + " like your post");
-                }
-                else
-                {
-                    Console.WriteLine(inputList[0] + ", " + inputList[1] + " " + likesLeft + " others like your post");
-                }
+                Console.WriteLine(letter);
             }
+            string myChar = new string(ch);
+            Console.WriteLine("Converted to string = {0}", myChar);
+
 
             // DEMO LISTS
             //var numbers = new List<int>() { 1, 2, 3, 4 };

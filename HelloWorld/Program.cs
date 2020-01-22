@@ -41,17 +41,44 @@ namespace HelloWorld
             //}
 
             // X 55 2
-            Console.WriteLine("Enter your name: ");
+            //Console.WriteLine("Enter your name: ");
+            //var input = Console.ReadLine();
+
+            //char[] ch = input.ToCharArray();
+            //Array.Reverse(ch);
+            //foreach (var letter in ch)
+            //{
+            //    Console.WriteLine(letter);
+            //}
+            //string myChar = new string(ch);
+            //Console.WriteLine("Converted to string = {0}", myChar);
+
+            // X 55 3
+            Console.WriteLine("Enter some unique numbers: ");
             var input = Console.ReadLine();
 
-            char[] ch = input.ToCharArray();
-            Array.Reverse(ch);
-            foreach (var letter in ch)
+            var list = new List<char>();
+            foreach (var num in input)
             {
-                Console.WriteLine(letter);
+                list.Add(num);
             }
-            string myChar = new string(ch);
-            Console.WriteLine("Converted to string = {0}", myChar);
+
+            if (list.Count != list.Distinct().Count())
+            {
+                Console.WriteLine("No Duplicates Please! Try Again");
+                Environment.Exit(0);
+            }
+            var newList = new List<int>();
+            foreach (var num in input)
+            {
+                int val = (int)Char.GetNumericValue(num);
+                newList.Add(val);
+            }
+            newList.Sort();
+            foreach (var num in newList)
+            {
+                Console.WriteLine(num);
+            }
 
 
             // DEMO LISTS

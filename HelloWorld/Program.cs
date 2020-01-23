@@ -54,31 +54,53 @@ namespace HelloWorld
             //Console.WriteLine("Converted to string = {0}", myChar);
 
             // X 55 3
-            Console.WriteLine("Enter some unique numbers: ");
-            var input = Console.ReadLine();
+            //Console.WriteLine("Enter some unique numbers: ");
+            //var input = Console.ReadLine();
 
-            var list = new List<char>();
-            foreach (var num in input)
+            //var list = new List<char>();
+            //foreach (var num in input)
+            //{
+            //    list.Add(num);
+            //}
+
+            //if (list.Count != list.Distinct().Count())
+            //{
+            //    Console.WriteLine("No Duplicates Please! Try Again");
+            //    Environment.Exit(0);
+            //}
+            //var newList = new List<int>();
+            //foreach (var num in input)
+            //{
+            //    int val = (int)Char.GetNumericValue(num);
+            //    newList.Add(val);
+            //}
+            //newList.Sort();
+            //foreach (var num in newList)
+            //{
+            //    Console.WriteLine(num);
+            //}
+
+            // X 55 4
+            var numList = new List<string>();
+            while (true)
             {
-                list.Add(num);
+                Console.WriteLine("Enter a number or type quit to exit: ");
+                var input = Console.ReadLine();
+
+                if (input.ToLower() == "quit")
+                {
+                    break;
+                }
+
+                numList.Add(input);                
+            }
+            IEnumerable<string> distinctNums = numList.Distinct();
+            Console.WriteLine("Unique nums: ");
+            foreach (var i in distinctNums)
+            {
+                Console.WriteLine(i);
             }
 
-            if (list.Count != list.Distinct().Count())
-            {
-                Console.WriteLine("No Duplicates Please! Try Again");
-                Environment.Exit(0);
-            }
-            var newList = new List<int>();
-            foreach (var num in input)
-            {
-                int val = (int)Char.GetNumericValue(num);
-                newList.Add(val);
-            }
-            newList.Sort();
-            foreach (var num in newList)
-            {
-                Console.WriteLine(num);
-            }
 
 
             // DEMO LISTS

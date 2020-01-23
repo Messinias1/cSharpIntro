@@ -11,6 +11,22 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            // Date Time
+            var dateTime = new DateTime(2015, 1, 1);
+            var now = DateTime.Now;
+            var today = DateTime.Today;
+
+            Console.WriteLine("Hour: " + now.Hour);
+            Console.WriteLine("Minute: " + now.Minute);
+
+            var tomorrow = now.AddDays(1);
+            var yesterday = now.AddDays(-1);
+
+            Console.WriteLine(now.ToLongDateString());
+            Console.WriteLine(now.ToShortDateString());
+            Console.WriteLine(now.ToLongTimeString());
+            Console.WriteLine(now.ToString("yyyy-MM-dd"));
+
             // X 55 1
             //var inputList = new List<string>();
             //while (true)
@@ -102,27 +118,27 @@ namespace HelloWorld
             //}
 
             // X 55 5
-            Console.WriteLine("Enter a list of comma seperated numbers: ");
-            var num = Console.ReadLine().Split(',');
+            //Console.WriteLine("Enter a list of comma seperated numbers: ");
+            //var num = Console.ReadLine().Split(',');
 
-            int[] digits = num.Select(d => Convert.ToInt32(d)).ToArray();
-            
-            if(digits.Length == 0 || digits.Length < 5)
-            {
-                Console.WriteLine("Invalid Input, retry");
-                Environment.Exit(0);
-            }
+            //int[] digits = num.Select(d => Convert.ToInt32(d)).ToArray();
 
-            int first = digits.Min();
-            digits = digits.Where(val => val != first).ToArray();
-            Console.WriteLine("first smallest " + first);
-            int second = digits.Min();
-            digits = digits.Where(val => val != second).ToArray();
-            Console.WriteLine("second smallest " + second);
-            int third = digits.Min();
-            digits = digits.Where(val => val != third).ToArray();
-            Console.WriteLine("third smallest " + third);
-            
+            //if(digits.Length == 0 || digits.Length < 5)
+            //{
+            //    Console.WriteLine("Invalid Input, retry");
+            //    Environment.Exit(0);
+            //}
+
+            //int first = digits.Min();
+            //digits = digits.Where(val => val != first).ToArray();
+            //Console.WriteLine("first smallest " + first);
+            //int second = digits.Min();
+            //digits = digits.Where(val => val != second).ToArray();
+            //Console.WriteLine("second smallest " + second);
+            //int third = digits.Min();
+            //digits = digits.Where(val => val != third).ToArray();
+            //Console.WriteLine("third smallest " + third);
+
             // DEMO LISTS
             //var numbers = new List<int>() { 1, 2, 3, 4 };
             //numbers.Add(1);

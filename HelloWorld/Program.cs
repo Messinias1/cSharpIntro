@@ -81,28 +81,48 @@ namespace HelloWorld
             //}
 
             // X 55 4
-            var numList = new List<string>();
-            while (true)
+            //var numList = new List<string>();
+            //while (true)
+            //{
+            //    Console.WriteLine("Enter a number or type quit to exit: ");
+            //    var input = Console.ReadLine();
+
+            //    if (input.ToLower() == "quit")
+            //    {
+            //        break;
+            //    }
+
+            //    numList.Add(input);                
+            //}
+            //IEnumerable<string> distinctNums = numList.Distinct();
+            //Console.WriteLine("Unique nums: ");
+            //foreach (var i in distinctNums)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            // X 55 5
+            Console.WriteLine("Enter a list of comma seperated numbers: ");
+            var num = Console.ReadLine().Split(',');
+
+            int[] digits = num.Select(d => Convert.ToInt32(d)).ToArray();
+            
+            if(digits.Length == 0 || digits.Length < 5)
             {
-                Console.WriteLine("Enter a number or type quit to exit: ");
-                var input = Console.ReadLine();
-
-                if (input.ToLower() == "quit")
-                {
-                    break;
-                }
-
-                numList.Add(input);                
-            }
-            IEnumerable<string> distinctNums = numList.Distinct();
-            Console.WriteLine("Unique nums: ");
-            foreach (var i in distinctNums)
-            {
-                Console.WriteLine(i);
+                Console.WriteLine("Invalid Input, retry");
+                Environment.Exit(0);
             }
 
-
-
+            int first = digits.Min();
+            digits = digits.Where(val => val != first).ToArray();
+            Console.WriteLine("first smallest " + first);
+            int second = digits.Min();
+            digits = digits.Where(val => val != second).ToArray();
+            Console.WriteLine("second smallest " + second);
+            int third = digits.Min();
+            digits = digits.Where(val => val != third).ToArray();
+            Console.WriteLine("third smallest " + third);
+            
             // DEMO LISTS
             //var numbers = new List<int>() { 1, 2, 3, 4 };
             //numbers.Add(1);

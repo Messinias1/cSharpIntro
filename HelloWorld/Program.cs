@@ -22,6 +22,14 @@ namespace HelloWorld
             Console.WriteLine("Duration: " + duration);
 
             Console.WriteLine("Minute: " + timeSpan.Minutes);
+            Console.WriteLine("Total Minutes: " + timeSpan.TotalMinutes);
+
+            Console.WriteLine("Add Examples: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
+            Console.WriteLine("Subtract Examples: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
+
+            Console.WriteLine("ToString: " + timeSpan.ToString());
+
+            Console.WriteLine("Parse: " + TimeSpan.Parse("01:02:03"));
 
             // Date Time
             //var dateTime = new DateTime(2015, 1, 1);

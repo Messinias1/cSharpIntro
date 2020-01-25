@@ -11,25 +11,31 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            // Demo Strings
+            var fullName = "Carl Kakisis ";
+            Console.WriteLine("Trim: '{0}'", fullName.Trim());
+            Console.WriteLine("ToUpper: '{0}'", fullName.Trim().ToUpper());
+
+
             // Time Span
-            var timeSpan = new TimeSpan(1, 2, 3);
-            var timeSpan1 = new TimeSpan(1, 0, 0);
-            var timeSpan2 = TimeSpan.FromHours(1);
+            //var timeSpan = new TimeSpan(1, 2, 3);
+            //var timeSpan1 = new TimeSpan(1, 0, 0);
+            //var timeSpan2 = TimeSpan.FromHours(1);
 
-            var start = DateTime.Now;
-            var end = DateTime.Now.AddMinutes(2);
-            var duration = end - start;
-            Console.WriteLine("Duration: " + duration);
+            //var start = DateTime.Now;
+            //var end = DateTime.Now.AddMinutes(2);
+            //var duration = end - start;
+            //Console.WriteLine("Duration: " + duration);
 
-            Console.WriteLine("Minute: " + timeSpan.Minutes);
-            Console.WriteLine("Total Minutes: " + timeSpan.TotalMinutes);
+            //Console.WriteLine("Minute: " + timeSpan.Minutes);
+            //Console.WriteLine("Total Minutes: " + timeSpan.TotalMinutes);
 
-            Console.WriteLine("Add Examples: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
-            Console.WriteLine("Subtract Examples: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
+            //Console.WriteLine("Add Examples: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
+            //Console.WriteLine("Subtract Examples: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
 
-            Console.WriteLine("ToString: " + timeSpan.ToString());
+            //Console.WriteLine("ToString: " + timeSpan.ToString());
 
-            Console.WriteLine("Parse: " + TimeSpan.Parse("01:02:03"));
+            //Console.WriteLine("Parse: " + TimeSpan.Parse("01:02:03"));
 
             // Date Time
             //var dateTime = new DateTime(2015, 1, 1);

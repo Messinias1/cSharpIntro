@@ -11,19 +11,38 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            // X 67 1
+            Console.WriteLine("Enter some numbers seperated by a hyphen: ");
+            var input = Console.ReadLine().Split('-');
+            var inputList = new List<Int32>();
+
+            foreach(var i in input)
+            {
+                inputList.Add(Convert.ToInt32(i));
+            }
+            var max = inputList.Max();
+            var min = inputList.Min();
+
+            var all = Enumerable.Range(min, max - min + 1);
+
+            if (inputList.SequenceEqual(all) || inputList.SequenceEqual(all.Reverse()))
+                Console.WriteLine("Consecutive");
+            else
+                Console.WriteLine("Not Consecutive");
+
             // String Builder
-            var builder = new StringBuilder();
-            builder.Append('-', 10);
-            builder.AppendLine();
-            builder.Append("Header");
-            builder.AppendLine();
-            builder.Append('-', 10);
+            //var builder = new StringBuilder();
+            //builder.Append('-', 10);
+            //builder.AppendLine();
+            //builder.Append("Header");
+            //builder.AppendLine();
+            //builder.Append('-', 10);
 
-            builder.Replace('-', '+');
-            builder.Remove(0, 10);
-            builder.Insert(0, new string('-', 10));
+            //builder.Replace('-', '+');
+            //builder.Remove(0, 10);
+            //builder.Insert(0, new string('-', 10));
 
-            Console.WriteLine(builder);
+            //Console.WriteLine(builder);
 
             // Demo Strings
             //var fullName = "Carl Kakisis ";

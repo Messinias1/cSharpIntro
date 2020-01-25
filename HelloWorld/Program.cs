@@ -11,6 +11,20 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            // String Builder
+            var builder = new StringBuilder();
+            builder.Append('-', 10);
+            builder.AppendLine();
+            builder.Append("Header");
+            builder.AppendLine();
+            builder.Append('-', 10);
+
+            builder.Replace('-', '+');
+            builder.Remove(0, 10);
+            builder.Insert(0, new string('-', 10));
+
+            Console.WriteLine(builder);
+
             // Demo Strings
             //var fullName = "Carl Kakisis ";
             //Console.WriteLine("Trim: '{0}'", fullName.Trim());
@@ -40,9 +54,9 @@ namespace HelloWorld
             //float price = 29.95f;
             //Console.WriteLine(price.ToString("C"));
 
-            var sentence = "This is going to be a really really really really really long text";
-            var summary = StringUtility.SummerizeText(sentence, 25);
-            Console.WriteLine(summary);
+            //var sentence = "This is going to be a really really really really really long text";
+            //var summary = StringUtility.SummerizeText(sentence, 25);
+            //Console.WriteLine(summary);
 
 
             // Time Span

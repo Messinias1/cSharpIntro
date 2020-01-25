@@ -40,6 +40,10 @@ namespace HelloWorld
             //float price = 29.95f;
             //Console.WriteLine(price.ToString("C"));
 
+            var sentence = "This is going to be a really really really really really long text";
+            var summary = StringUtility.SummerizeText(sentence, 25);
+            Console.WriteLine(summary);
+
 
             // Time Span
             //var timeSpan = new TimeSpan(1, 2, 3);
@@ -601,9 +605,9 @@ namespace HelloWorld
             //const float Pi = 3.14f;
             //Console.WriteLine(Pi);
         }
-        public static void Increment(int number)
-        {
-            number += 10;
-        }
+        //public static void Increment(int number)
+        //{
+        //    number += 10;
+        //}
     }
 }

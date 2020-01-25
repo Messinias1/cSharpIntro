@@ -12,23 +12,42 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             // X 67 1
+            //Console.WriteLine("Enter some numbers seperated by a hyphen: ");
+            //var input = Console.ReadLine().Split('-');
+            //var inputList = new List<Int32>();
+
+            //foreach(var i in input)
+            //{
+            //    inputList.Add(Convert.ToInt32(i));
+            //}
+            //var max = inputList.Max();
+            //var min = inputList.Min();
+
+            //var all = Enumerable.Range(min, max - min + 1);
+
+            //if (inputList.SequenceEqual(all) || inputList.SequenceEqual(all.Reverse()))
+            //    Console.WriteLine("Consecutive");
+            //else
+            //    Console.WriteLine("Not Consecutive");
+
+            // X 67 2
             Console.WriteLine("Enter some numbers seperated by a hyphen: ");
             var input = Console.ReadLine().Split('-');
-            var inputList = new List<Int32>();
 
-            foreach(var i in input)
+            if(input == null)
             {
-                inputList.Add(Convert.ToInt32(i));
+                Environment.Exit(0);
             }
-            var max = inputList.Max();
-            var min = inputList.Min();
 
-            var all = Enumerable.Range(min, max - min + 1);
-
-            if (inputList.SequenceEqual(all) || inputList.SequenceEqual(all.Reverse()))
-                Console.WriteLine("Consecutive");
-            else
-                Console.WriteLine("Not Consecutive");
+            var inputList = new List<string>();
+            foreach (var i in input)
+            {
+                inputList.Add(i);
+            }
+            if (inputList.Count != inputList.Distinct().Count())
+            {
+                Console.WriteLine("Duplicate");
+            }
 
             // String Builder
             //var builder = new StringBuilder();

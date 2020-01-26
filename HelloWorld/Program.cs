@@ -50,21 +50,31 @@ namespace HelloWorld
             //}
 
             // X 67 3
-            Console.WriteLine("Enter a time value in the 24-hour time format (e.g. 19:00) ");
-            var input = Console.ReadLine().Split(':');
-            if(input == null)
-                Console.WriteLine("Invalid time");
+            //Console.WriteLine("Enter a time value in the 24-hour time format (e.g. 19:00) ");
+            //var input = Console.ReadLine().Split(':');
+            //if(input == null)
+            //    Console.WriteLine("Invalid time");
 
-            var numList = new List<int>();
+            //var numList = new List<int>();
 
-            for(var i = 0; i < input.Length; i++)
+            //for(var i = 0; i < input.Length; i++)
+            //{
+            //    numList.Add(Convert.ToInt32(input[i]));
+            //}
+            //if(numList[0] > 24 || numList[1] > 59)
+            //    Console.WriteLine("Invalid Time");
+            //else
+            //    Console.WriteLine("OK");
+
+            // X 67 4
+            Console.WriteLine("Enter a few words seperated by a space: ");
+            var input = Console.ReadLine().ToLower().ToString().Split(' ');
+            var inputList = new List<string>();
+            for (var i = 0; i < input.Length; i++)
             {
-                numList.Add(Convert.ToInt32(input[i]));
+                inputList.Add(char.ToUpper(input[i][0]) + input[i].Substring(1));
             }
-            if(numList[0] > 24 || numList[1] > 59)
-                Console.WriteLine("Invalid Time");
-            else
-                Console.WriteLine("OK");
+            Console.WriteLine(String.Join("", inputList));
 
             // String Builder
             //var builder = new StringBuilder();

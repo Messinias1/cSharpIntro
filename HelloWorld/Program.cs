@@ -31,23 +31,40 @@ namespace HelloWorld
             //    Console.WriteLine("Not Consecutive");
 
             // X 67 2
-            Console.WriteLine("Enter some numbers seperated by a hyphen: ");
-            var input = Console.ReadLine().Split('-');
+            //Console.WriteLine("Enter some numbers seperated by a hyphen: ");
+            //var input = Console.ReadLine().Split('-');
 
+            //if(input == null)
+            //{
+            //    Environment.Exit(0);
+            //}
+
+            //var inputList = new List<string>();
+            //foreach (var i in input)
+            //{
+            //    inputList.Add(i);
+            //}
+            //if (inputList.Count != inputList.Distinct().Count())
+            //{
+            //    Console.WriteLine("Duplicate");
+            //}
+
+            // X 67 3
+            Console.WriteLine("Enter a time value in the 24-hour time format (e.g. 19:00) ");
+            var input = Console.ReadLine().Split(':');
             if(input == null)
-            {
-                Environment.Exit(0);
-            }
+                Console.WriteLine("Invalid time");
 
-            var inputList = new List<string>();
-            foreach (var i in input)
+            var numList = new List<int>();
+
+            for(var i = 0; i < input.Length; i++)
             {
-                inputList.Add(i);
+                numList.Add(Convert.ToInt32(input[i]));
             }
-            if (inputList.Count != inputList.Distinct().Count())
-            {
-                Console.WriteLine("Duplicate");
-            }
+            if(numList[0] > 24 || numList[1] > 59)
+                Console.WriteLine("Invalid Time");
+            else
+                Console.WriteLine("OK");
 
             // String Builder
             //var builder = new StringBuilder();

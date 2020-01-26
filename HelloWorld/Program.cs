@@ -67,14 +67,20 @@ namespace HelloWorld
             //    Console.WriteLine("OK");
 
             // X 67 4
-            Console.WriteLine("Enter a few words seperated by a space: ");
-            var input = Console.ReadLine().ToLower().ToString().Split(' ');
-            var inputList = new List<string>();
-            for (var i = 0; i < input.Length; i++)
-            {
-                inputList.Add(char.ToUpper(input[i][0]) + input[i].Substring(1));
-            }
-            Console.WriteLine(String.Join("", inputList));
+            //Console.WriteLine("Enter a few words seperated by a space: ");
+            //var input = Console.ReadLine().ToLower().ToString().Split(' ');
+            //var inputList = new List<string>();
+            //for (var i = 0; i < input.Length; i++)
+            //{
+            //    inputList.Add(char.ToUpper(input[i][0]) + input[i].Substring(1));
+            //}
+            //Console.WriteLine(String.Join("", inputList));
+
+            // X 67 5
+            Console.WriteLine("Enter an english word: ");
+            var input = Console.ReadLine();
+            var vowelCount = input.Count("aeiouAEIOU".Contains);
+            Console.WriteLine("Number of vowels equals " + vowelCount);
 
             // String Builder
             //var builder = new StringBuilder();

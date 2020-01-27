@@ -12,24 +12,42 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            // Demo directory and directoy info classes
+            Directory.CreateDirectory(@"c:\temp\folder1");
+
+            //var files = Directory.GetFiles(@"c:\Users\carlk\Documents\cRefresher", "*.c*", SearchOption.AllDirectories);
+            //foreach(var file in files)
+            //{
+            //    Console.WriteLine(file);
+            //}
+            var directories = Directory.GetDirectories(@"c:\Users\carlk\Documents\cRefresher", "*.*", SearchOption.AllDirectories);
+            foreach (var direc in directories)
+            {
+                Console.WriteLine(direc);
+            }
+
+            var directoryInfo = new DirectoryInfo("...");
+            directoryInfo.GetFiles();
+            directoryInfo.GetDirectories();
+
             // Demo file and file info
-            var path = @"c:\somefile.jpg";
+            //var path = @"c:\somefile.jpg";
 
-            File.Copy(@"c:\temp\myfile.jpg", @"d:\temp\myfile.jpg", true);
-            File.Delete(path);
-            if(File.Exists(path))
-            {
-                //
-            }
-            var content = File.ReadAllText(path);
+            //File.Copy(@"c:\temp\myfile.jpg", @"d:\temp\myfile.jpg", true);
+            //File.Delete(path);
+            //if(File.Exists(path))
+            //{
+            //    //
+            //}
+            //var content = File.ReadAllText(path);
 
-            var fileInfo = new FileInfo(path);
-            fileInfo.CopyTo("...");
-            fileInfo.Delete();
-            if(fileInfo.Exists)
-            {
-                //
-            }
+            //var fileInfo = new FileInfo(path);
+            //fileInfo.CopyTo("...");
+            //fileInfo.Delete();
+            //if(fileInfo.Exists)
+            //{
+            //    //
+            //}
 
             // X 67 1
             //Console.WriteLine("Enter some numbers seperated by a hyphen: ");

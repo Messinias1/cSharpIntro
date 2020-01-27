@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using HelloWorld.Math;
 using System;
@@ -11,6 +12,25 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            // Demo file and file info
+            var path = @"c:\somefile.jpg";
+
+            File.Copy(@"c:\temp\myfile.jpg", @"d:\temp\myfile.jpg", true);
+            File.Delete(path);
+            if(File.Exists(path))
+            {
+                //
+            }
+            var content = File.ReadAllText(path);
+
+            var fileInfo = new FileInfo(path);
+            fileInfo.CopyTo("...");
+            fileInfo.Delete();
+            if(fileInfo.Exists)
+            {
+                //
+            }
+
             // X 67 1
             //Console.WriteLine("Enter some numbers seperated by a hyphen: ");
             //var input = Console.ReadLine().Split('-');
@@ -77,10 +97,10 @@ namespace HelloWorld
             //Console.WriteLine(String.Join("", inputList));
 
             // X 67 5
-            Console.WriteLine("Enter an english word: ");
-            var input = Console.ReadLine();
-            var vowelCount = input.Count("aeiouAEIOU".Contains);
-            Console.WriteLine("Number of vowels equals " + vowelCount);
+            //Console.WriteLine("Enter an english word: ");
+            //var input = Console.ReadLine();
+            //var vowelCount = input.Count("aeiouAEIOU".Contains);
+            //Console.WriteLine("Number of vowels equals " + vowelCount);
 
             // String Builder
             //var builder = new StringBuilder();
@@ -247,14 +267,13 @@ namespace HelloWorld
             //        break;
             //    }
 
-            //    numList.Add(input);                
+            //    numList.Add(input);
             //}
-            //IEnumerable<string> distinctNums = numList.Distinct();
+            ////IEnumerable<string> distinctNums = numList.Distinct();
+            //var distinctNums = GetUniqueNums(numList);
             //Console.WriteLine("Unique nums: ");
             //foreach (var i in distinctNums)
-            //{
             //    Console.WriteLine(i);
-            //}
 
             // X 55 5
             //Console.WriteLine("Enter a list of comma seperated numbers: ");
@@ -690,9 +709,10 @@ namespace HelloWorld
             //const float Pi = 3.14f;
             //Console.WriteLine(Pi);
         }
-        //public static void Increment(int number)
+        //public static IEnumerable<string> GetUniqueNums(List<string> numList)
         //{
-        //    number += 10;
+        //    IEnumerable<string> distinctNums = numList.Distinct();
+        //    return distinctNums;
         //}
     }
 }

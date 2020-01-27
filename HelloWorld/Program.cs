@@ -12,23 +12,31 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            // Demo path
+            var path = @"c:\Users\carlk\Documents\cRefresher\pset1\mario.c";
+
+            Console.WriteLine("Extension: " + Path.GetExtension(path));
+            Console.WriteLine("File Name: " + Path.GetFileName(path));
+            Console.WriteLine("File Name Without Extension: " + Path.GetFileNameWithoutExtension(path));
+            Console.WriteLine("Directory Name: " + Path.GetDirectoryName(path));
+
             // Demo directory and directoy info classes
-            Directory.CreateDirectory(@"c:\temp\folder1");
+            //Directory.CreateDirectory(@"c:\temp\folder1");
 
             //var files = Directory.GetFiles(@"c:\Users\carlk\Documents\cRefresher", "*.c*", SearchOption.AllDirectories);
-            //foreach(var file in files)
+            //foreach (var file in files)
             //{
             //    Console.WriteLine(file);
             //}
-            var directories = Directory.GetDirectories(@"c:\Users\carlk\Documents\cRefresher", "*.*", SearchOption.AllDirectories);
-            foreach (var direc in directories)
-            {
-                Console.WriteLine(direc);
-            }
+            //var directories = Directory.GetDirectories(@"c:\Users\carlk\Documents\cRefresher", "*.*", SearchOption.AllDirectories);
+            //foreach (var direc in directories)
+            //{
+            //    Console.WriteLine(direc);
+            //}
 
-            var directoryInfo = new DirectoryInfo("...");
-            directoryInfo.GetFiles();
-            directoryInfo.GetDirectories();
+            //var directoryInfo = new DirectoryInfo("...");
+            //directoryInfo.GetFiles();
+            //directoryInfo.GetDirectories();
 
             // Demo file and file info
             //var path = @"c:\somefile.jpg";

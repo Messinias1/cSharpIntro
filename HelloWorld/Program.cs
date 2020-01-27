@@ -12,13 +12,21 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            // Demo path
-            var path = @"c:\Users\carlk\Documents\cRefresher\pset1\mario.c";
+            // X 75 1
+            var path = @"c:\Users\carlk\Documents\Programming Fundamentals.txt";
+            char[] delims = { '.', '!', '?', ',', '(', ')', '\t', '\n', '\r', ' ' };
 
-            Console.WriteLine("Extension: " + Path.GetExtension(path));
-            Console.WriteLine("File Name: " + Path.GetFileName(path));
-            Console.WriteLine("File Name Without Extension: " + Path.GetFileNameWithoutExtension(path));
-            Console.WriteLine("Directory Name: " + Path.GetDirectoryName(path));
+            var content = File.ReadAllText(path).Split(delims, StringSplitOptions.RemoveEmptyEntries);
+
+            Console.WriteLine(content.Count());
+
+            // Demo path
+            //var path = @"c:\Users\carlk\Documents\cRefresher\pset1\mario.c";
+
+            //Console.WriteLine("Extension: " + Path.GetExtension(path));
+            //Console.WriteLine("File Name: " + Path.GetFileName(path));
+            //Console.WriteLine("File Name Without Extension: " + Path.GetFileNameWithoutExtension(path));
+            //Console.WriteLine("Directory Name: " + Path.GetDirectoryName(path));
 
             // Demo directory and directoy info classes
             //Directory.CreateDirectory(@"c:\temp\folder1");

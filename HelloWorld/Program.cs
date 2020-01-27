@@ -12,13 +12,26 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            // X 75 1
+            // X 75 2
             var path = @"c:\Users\carlk\Documents\Programming Fundamentals.txt";
             char[] delims = { '.', '!', '?', ',', '(', ')', '\t', '\n', '\r', ' ' };
-
+            var wordList = new List<string>();
             var content = File.ReadAllText(path).Split(delims, StringSplitOptions.RemoveEmptyEntries);
 
-            Console.WriteLine(content.Count());
+            foreach (var word in content)
+                wordList.Add(word);
+
+            Console.WriteLine(wordList.OrderByDescending(s => s.Length).First());
+
+
+
+            // X 75 1
+            //var path = @"c:\Users\carlk\Documents\Programming Fundamentals.txt";
+            //char[] delims = { '.', '!', '?', ',', '(', ')', '\t', '\n', '\r', ' ' };
+
+            //var content = File.ReadAllText(path).Split(delims, StringSplitOptions.RemoveEmptyEntries);
+
+            //Console.WriteLine(content.Count());
 
             // Demo path
             //var path = @"c:\Users\carlk\Documents\cRefresher\pset1\mario.c";
